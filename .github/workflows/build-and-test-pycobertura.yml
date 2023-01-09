@@ -27,3 +27,9 @@ jobs:
           python -m pip install tox tox-gh-actions
       - name: Test with tox
         run: tox
+      - name: Upload coverage artifact
+        if: ${{ github.event_name == 'push' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: cobertura-coverage-${{ github.sha }}-${{ matrix.python-version }}
+          path: coverage.xml
