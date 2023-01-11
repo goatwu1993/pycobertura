@@ -61,10 +61,15 @@ jobs:
             --format=markdown \
             -o coveragediff.md || true
           cat coveragediff.md
-      - name: comment-on-pr
+      #- name: comment-on-pr
+      #  if: ${{ github.event_name == 'pull_request' }}
+      #  uses: mshick/add-pr-comment@v2
+      #  with:
+      #    message-path: coveragediff.md
+      #    message-id: cobertura-coverage-${{ matrix.python-version }}
+      - name: comment-on-pr-python-metrics
+        uses: marocchino/sticky-pull-request-comment@v2
         if: ${{ github.event_name == 'pull_request' }}
-        uses: mshick/add-pr-comment@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message-path: coveragediff.md
-          message-id: cobertura-coverage-${{ matrix.python-version }}
+          header: ${{ matrix.python-version }}
+          path: coveragediff.md
