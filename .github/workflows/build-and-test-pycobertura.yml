@@ -48,7 +48,7 @@ jobs:
       - name: install-pycobertura
         if: ${{ github.event_name == 'pull_request' }}
         run: |
-          pip install pycobertura
+          python setup.py install
       - name: make-coverage-diff-markdown-against-base-ref
         if: ${{ github.event_name == 'pull_request' }}
         run: |
