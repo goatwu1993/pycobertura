@@ -451,14 +451,20 @@ class GitHubReporter(Reporter):
         result_strs = []
         for file_name in file_names:
             for rang in rangify(self.cobertura.missed_lines(file_name)):
-                result_strs.append(self.to_github_error_string(file_name=file_name, start_line=rang[0], end_line=rang[1]))
+                result_strs.append(
+                    self.to_github_error_string(
+                        file_name=file_name, start_line=rang[0], end_line=rang[1]
+                    )
+                )
         result = "\n".join(result_strs)
         return result
 
     @staticmethod
     def to_github_error_string(
-            file_name:str, start_line: int, end_line: int, title: str = "pycobertura", message: str = "not covered"
+        file_name: str,
+        start_line: int,
+        end_line: int,
+        title: str = "pycobertura",
+        message: str = "not covered",
     ):
-        return (
-            f"::error file={file_name},line={start_line},endLine={end_line},title={title}::{message}"
-        )
+        return f"::error file={file_name},line={start_line},endLine={end_line},title={title}::{message}"
