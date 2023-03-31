@@ -661,3 +661,13 @@ def test_html_report_delta__show_missing_False():
     </div>
   </body>
 </html>"""
+
+def test_github_report():
+    from pycobertura.reporters import GitHubReporter
+
+    cobertura = make_cobertura()
+    report = GitHubReporter(cobertura)
+
+    assert report.generate() == """\
+::error file=search/BinarySearch.java,line=24,endLine=24,title=pycobertura::not covered
+::error file=search/LinearSearch.java,line=19,endLine=24,title=pycobertura::not covered"""
