@@ -1,0 +1,2 @@
+::notice file=dummy/dummy.py,line=2,endLine=2,title=pycobertura::not covered
+::notice file=dummy/dummy.py,line=5,endLine=5,title=pycobertura::not covered

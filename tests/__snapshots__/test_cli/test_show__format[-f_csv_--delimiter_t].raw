@@ -1,0 +1,4 @@
+Filename	Stmts	Miss	Cover	Missing
+dummy/__init__.py	0	0	0.00%	
+dummy/dummy.py	4	2	50.00%	2, 5
+TOTAL	4	2	50.00%	
