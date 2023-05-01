@@ -1,0 +1,2 @@
+::error file=dummy/dummy.py,line=2,endLine=2,title=JCov::missing coverage
+::error file=dummy/dummy.py,line=5,endLine=5,title=JCov::missing coverage

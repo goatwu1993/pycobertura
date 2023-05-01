@@ -1,0 +1,24 @@
+{
+    "files": [
+        {
+            "Filename": "dummy/__init__.py",
+            "Stmts": 0,
+            "Miss": 0,
+            "Cover": "0.00%",
+            "Missing": ""
+        },
+        {
+            "Filename": "dummy/dummy.py",
+            "Stmts": 4,
+            "Miss": 2,
+            "Cover": "50.00%",
+            "Missing": "2, 5"
+        }
+    ],
+    "total": {
+        "Filename": "TOTAL",
+        "Stmts": 4,
+        "Miss": 2,
+        "Cover": "50.00%"
+    }
+}

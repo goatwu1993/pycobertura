@@ -1,0 +1,6 @@
+Filename           Stmts    Miss  Cover     Missing
+---------------  -------  ------  --------  ---------
+dummy/dummy.py         0      -2  +40.00%
+dummy/dummy2.py       +2      +1  -25.00%   5
+dummy/dummy3.py       +2      +2  +100.00%  1, 2
+TOTAL                 +4      +1  +31.06%

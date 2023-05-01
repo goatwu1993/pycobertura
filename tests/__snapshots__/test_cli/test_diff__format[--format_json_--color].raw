@@ -1,0 +1,31 @@
+{
+    "files": [
+        {
+            "Filename": "dummy/dummy.py",
+            "Stmts": "0",
+            "Miss": "[32m-2[39m",
+            "Cover": "+40.00%",
+            "Missing": ""
+        },
+        {
+            "Filename": "dummy/dummy2.py",
+            "Stmts": "+2",
+            "Miss": "[31m+1[39m",
+            "Cover": "-25.00%",
+            "Missing": "[31m5[39m"
+        },
+        {
+            "Filename": "dummy/dummy3.py",
+            "Stmts": "+2",
+            "Miss": "[31m+2[39m",
+            "Cover": "+100.00%",
+            "Missing": "[31m1[39m, [31m2[39m"
+        }
+    ],
+    "total": {
+        "Filename": "TOTAL",
+        "Stmts": "+4",
+        "Miss": "[31m+1[39m",
+        "Cover": "+31.06%"
+    }
+}
